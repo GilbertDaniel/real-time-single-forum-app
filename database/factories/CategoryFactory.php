@@ -9,7 +9,7 @@ $factory->define(Category::class, function (Faker $faker) {
     $word = $faker->word;
     return [
         'name' => $word,
-        'slug'  => $word,
+        'slug'  => str_slug($word),
 
     ];
 });
