@@ -11,9 +11,9 @@ class User{
     responseAfterLogin(response){
         const access_token = response.data.access_token;
         const user = response.data.user;
-        //console.log(response);
         if(Token.isValid(access_token)){
             AppStorage.store(access_token,user);
+            window.location = '/forum'
         }
     }
 
@@ -28,10 +28,12 @@ class User{
 
     loggedIn(){
         return this.hasToken()
+        
     }
 
     logout(){
         AppStorage.clear()
+        window.location = '/forum'
     }
 
     name(){
