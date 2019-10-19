@@ -5,6 +5,7 @@
         <v-text-field
         v-model="form.email"        
         label="E-mail"
+        type="email"
         required
         ></v-text-field>
         <v-text-field
@@ -15,12 +16,15 @@
         ></v-text-field>
 
         <v-btn color="green" type="submit">Login</v-btn>
+        <router-link to="/signup">
+          <v-btn color="blue">Sign Up</v-btn>
+        </router-link>
     </v-form>
     </v-container>
   </div>
 </template>
 <script>
-import * as axios from 'axios';
+//import * as axios from 'axios';
 export default {
     data(){
         return{

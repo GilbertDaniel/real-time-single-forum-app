@@ -2,18 +2,6 @@ import Token from "./Token";
 import AppStorage from "./AppStorage";
 
 class User{
-    // login(data){
-    //     axios.post('api/auth/login',data)
-    //         .then(function (response) {
-    //             Token.payload(response.data.access_token);
-    //             //console.log(response.data);
-    //             this.responseAfterLogin(response.data);
-    //         })
-    //         .catch(function (error) {
-    //             console.log(error.response.data);
-    //         });
-    // }
-
     login(data) {
         axios.post('/api/auth/login', data)
             .then(res => this.responseAfterLogin(res))
