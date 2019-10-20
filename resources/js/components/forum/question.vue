@@ -9,6 +9,7 @@
                   
               </h3>
               <div class="grey--text">
+                  {{data.user}} said
                   {{data.created_at}}
               </div>
           </div>
